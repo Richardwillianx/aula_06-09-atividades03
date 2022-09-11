@@ -1,9 +1,11 @@
+import { Item } from "./quest01/itens";
+
 interface Desconto {
   aplicarDescontoEmPorcentagem(desconto: number): void{
     throw 'Pegadinha do malandro!';
   }
 
-  recuperarValorTotal(): number;
+  recuperarValorTotal(): number{};
 }
 
 interface ValorPedido {
@@ -17,6 +19,12 @@ interface ValorPedido {
 }
 
 class Pedido implements ValorPedido {
+  adicionarItens(item1: Item) {
+      throw new Error("Method not implemented.");
+  }
+  mostrarPedido() {
+      throw new Error("Method not implemented.");
+  }
   itens: ItemPedido[] = [];
 
   add(item: ItemPedido): void {
